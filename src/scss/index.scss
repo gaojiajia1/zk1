@@ -1,0 +1,75 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(50px);
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    @include box_flex;
+    @include align;
+    i.icon-dizhi-01,
+    i.icon-wode {
+        color: #333;
+        font-size: pxTorem(16px);
+    }
+    span {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+section {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 pxTorem(10px);
+    @include sizing;
+    .logo {
+        width: 100%;
+        height: pxTorem(100px);
+        text-align: center;
+        img {
+            height: 100%;
+        }
+    }
+    .search {
+        width: 100%;
+        height: pxTorem(36px);
+        border: pxTorem(1px) solid #333;
+        margin-top: pxTroem(30px);
+        @include box_flex;
+        @include align;
+        span {
+            font-size: pxTroem(14px);
+            padding: 0 pxTorem(10px);
+            @include sizing;
+        }
+        input {
+            height: 100%;
+            flex: 1;
+            font-size: pxTroem(14px);
+            border-right: pxTorem(1px) solid #ccc;
+            padding: 0 pxTorem(5px);
+            @include sizing;
+        }
+    }
+    .list {
+        width: 100%;
+        li {
+            width: 100%;
+            height: pxTorem(30px);
+            border-bottom: pxTorem(1px) dashed #ccc;
+            line-height: pxTorem(30px);
+            font-size: pxTorme(14px);
+            padding: 0 pxTorme(5px);
+            @include sizing;
+        }
+    }
+}
